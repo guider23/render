@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 
 // Endpoint to store fingerprint
 app.post('/storeFingerprint', (req, res) => {
+    console.log('Request Body:', req.body);  // Log the request body
     const { credential } = req.body;
 
     // Insert fingerprint data into the database
@@ -44,6 +45,7 @@ app.post('/storeFingerprint', (req, res) => {
         res.json({ message: 'Fingerprint stored successfully' });
     });
 });
+
 
 // Start server
 app.listen(PORT, () => {
