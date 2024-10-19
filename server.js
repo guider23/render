@@ -15,6 +15,7 @@ const db = mysql.createConnection({
     password: 'j85ZMmHWMt', // Your database password
     database: 'sql12739212' // Your database name
 });
+
 // Connect to MySQL
 db.connect(err => {
     if (err) {
@@ -22,6 +23,11 @@ db.connect(err => {
         return;
     }
     console.log('MySQL connected...');
+});
+
+// Root endpoint
+app.get('/', (req, res) => {
+    res.send('Welcome to the Fingerprint Registration API!');
 });
 
 // Endpoint to store fingerprint
