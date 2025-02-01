@@ -10,10 +10,10 @@ app.use(express.json()); // Parse JSON bodies
 
 // MySQL connection
 const db = mysql.createConnection({
-    host: 'sql12.freesqldatabase.com',
-    user: 'sql12739212', // Your database username
-    password: 'j85ZMmHWMt', // Your database password
-    database: 'sql12739212' // Your database name
+    host: 'autorack.proxy.rlwy.net',
+    user: 'root', // Your database username
+    password: 'PMaLOewnnJoVlgvZfihfDtwWJtURcNXf', // Your database password
+    database: 'railway' // Your database name
 });
 
 // Connect to MySQL
