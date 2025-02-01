@@ -8,13 +8,14 @@ const PORT = process.env.PORT || 3001;
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON bodies
 
-// MySQL connection
 const db = mysql.createConnection({
     host: 'autorack.proxy.rlwy.net',
-    user: 'root', // Your database username
-    password: 'PMaLOewnnJoVlgvZfihfDtwWJtURcNXf', // Your database password
-    database: 'railway' // Your database name
+    port: 12771,
+    user: 'root',
+    password: 'PMaLOewnnJoVlgvZfihfDtwWJtURcNXf',
+    database: 'railway'
 });
+
 
 // Connect to MySQL
 db.connect(err => {
